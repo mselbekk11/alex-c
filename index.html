@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+}
+
+body {
+  background-color: #f9fafb;
+  font-family: "open sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+#second {
+    display: none;
+}
+
+#third {
+    display: none;
+}
+
+.button-container {
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+    </style>
+
+    <div class="container">
+        <img src="/img/alex.png" id="first"/>
+        <img src="/img/alex-1.png" id="second"/>
+        <img src="/img/alex-3.png" id="third"/>
+        <div class="button-container">
+        <button id="one">Mothers Dress</button>
+        <button id="two">Football</button>
+        <button id="three">London Cunt</button>
+    </div>
+    </div>
+
+
+
+    <script>
+        const outfitOne = document.getElementById('first')
+        const outfitTwo = document.getElementById('second')
+        const outfitThree = document.getElementById('third')
+
+        const buttonOne = document.getElementById('one')
+        const buttonTwo = document.getElementById('two')
+        const buttonThree = document.getElementById('three')
+
+        buttonOne.addEventListener('click', function(e) {
+            document.getElementById("first").style.display = "none";
+            document.getElementById("second").style.display = "block";
+            document.getElementById("third").style.display = "none";
+        })
+
+        buttonTwo.addEventListener('click', function(e) {
+            document.getElementById("first").style.display = "none";
+            document.getElementById("second").style.display = "none";
+            document.getElementById("third").style.display = "block";
+        })
+
+        buttonThree.addEventListener('click', function(e) {
+            document.getElementById("first").style.display = "block";
+            document.getElementById("second").style.display = "none";
+            document.getElementById("third").style.display = "none";
+        })
+
+
+    </script>
+    
+</body>
+</html>
